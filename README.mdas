@@ -1,2 +1,126 @@
 # CTC
-sasas
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow de Imágenes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000; /* Fondo negro por si no cargan las imágenes */
+      overflow: hidden; /* Evitar scroll */
+    }
+
+    .slideshow {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    .slideshow img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow">
+    <img src="imagen1.jpeg" alt="Imagen 1" class="active">
+    <img src="imagens\imagen2.jpeg" alt="Imagen 2">
+    <img src="imagens\imagen3.jpeg" alt="Imagen 3">
+    <img src="imagens\imagen5.jpeg" alt="Imagen 4">
+    <img src="imagens\imagen5.jpeg" alt="Imagen 5">
+    <img src="imagens\imagen6.jpeg" alt="Imagen 6">
+    <img src="imagens\imagen7.jpeg" alt="Imagen 7">
+    <img src="imagens\imagen8.jpeg" alt="Imagen 8">
+    <img src="imagens\imagen9.jpeg" alt="Imagen 9">
+    <img src="imagens\imagen10.jpeg" alt="Imagen 10">
+    <img src="imagens\imagen11.jpeg" alt="Imagen 11">
+    <img src="imagens\imagen12.jpeg" alt="Imagen 12">
+    <img src="imagens\imagen13.jpeg" alt="Imagen 13">
+    <img src="imagens\imagen14.jpeg" alt="Imagen 14">
+    <img src="imagens\imagen15.jpeg" alt="Imagen 15">
+    <img src="imagens\imagen16.jpeg" alt="Imagen 16">
+    <img src="imagens\imagen17.jpeg" alt="Imagen 17">
+
+    <img src="imagens\imagen18.jpeg" alt="Imagen 18">
+    <img src="imagens\imagen19.jpeg" alt="Imagen 19">
+    <img src="imagens\imagen20.jpeg" alt="Imagen 20">
+    <img src="imagens\imagen21.jpeg" alt="Imagen 21">
+    <img src="imagens\imagen22.jpeg" alt="Imagen 22">
+    <img src="imagens\imagen23.jpeg" alt="Imagen 23">
+    <img src="imagens\imagen24.jpeg" alt="Imagen 24">
+    <img src="imagens\imagen25.jpeg" alt="Imagen 25">
+    <img src="imagens\imagen26.jpeg" alt="Imagen 26">
+    <img src="imagens\imagen27.jpeg" alt="Imagen 27">
+    <img src="imagens\imagen28.jpeg" alt="Imagen 28">
+    <img src="imagens\imagen29.jpeg" alt="Imagen 29">
+    <img src="imagens\imagen30.jpeg" alt="Imagen 30">
+    <img src="imagens\imagen31.jpeg" alt="Imagen 31">
+    <img src="imagens\imagen32.jpeg" alt="Imagen 32">
+    <img src="imagens\imagen33.jpeg" alt="Imagen 33">
+    <img src="imagens\imagen34.jpeg" alt="Imagen 34">
+    <img src="imagens\imagen35.jpeg" alt="Imagen 35">
+    <img src="imagens\imagen36.jpeg" alt="Imagen 36">
+    <img src="imagens\imagen37.jpeg" alt="Imagen 37">
+    <img src="imagens\imagen38.jpeg" alt="Imagen 38">
+    <img src="imagens\imagen39.jpeg" alt="Imagen 39">
+    <img src="imagens\imagen40.jpeg" alt="Imagen 40">
+    <img src="imagens\imagen41.jpeg" alt="Imagen 41">
+    <img src="imagens\imagen42.jpeg" alt="Imagen 42">
+    <img src="imagens\imagen43.jpeg" alt="Imagen 43">
+    <img src="imagens\imagen44.jpeg" alt="Imagen 44">
+    <img src="imagens\imagen45.jpeg" alt="Imagen 45">
+    <img src="imagens\imagen46.jpeg" alt="Imagen 46">
+    <img src="imagens\imagen47.jpeg" alt="Imagen 47">
+    <img src="imagens\imagen48.jpeg" alt="Imagen 48">
+    <img src="imagens\imagen49.jpeg" alt="Imagen 49">
+
+
+
+  
+  </div>
+<!-- aca es donde deben sustituir en jpg y el titulo de este mismo cada imagen lleva una serie nueva -->
+  <script>
+    const images = document.querySelectorAll('.slideshow img');
+    let currentIndex = 0;
+
+    function changeImage() {
+      images[currentIndex].classList.remove('active');
+
+      // Actualiza el índice al siguiente (o al primero si estamos al final)
+      currentIndex = (currentIndex + 1) % images.length;
+
+      // Añade la clase 'active' a la nueva imagen
+      images[currentIndex].classList.add('active');
+    }
+
+    // Cambia de imagen cada 5 segundos
+    setInterval(changeImage, 5000);
+  </script>
+</body>
+</html>
